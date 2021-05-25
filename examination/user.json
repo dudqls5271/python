@@ -1,0 +1,13 @@
+[
+  {
+    "user_name" : "이영빈",
+    "user_id" : "1111",
+    "user_pw" : "1111",
+    "user_point" : "100"
+  }, {
+    "user_name" : "이영빈",
+    "user_id" : "2222",
+    "user_pw" : "1111",
+    "user_point" : "100"
+  }
+]
