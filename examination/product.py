@@ -8,7 +8,7 @@ def Digital():
     while True :
         # print(data[index]["name"])
         if data[index]["category"] == "Digital" :
-            print(data[index]["name"], end=", ")
+            print(data[index]["name"] + " " + "(" + data[index]["price"] + ")")
         index = index + 1
         if int(len(data)) == index:
             break
@@ -18,7 +18,7 @@ def life():
     while True :
         # print(data[index]["name"])
         if data[index]["category"] == "life" :
-            print(data[index]["name"], end=", ")
+            print(data[index]["name"] + " " + "(" + data[index]["price"] + ")")
         index = index + 1
         if int(len(data)) == index:
             break
@@ -28,7 +28,7 @@ def Fashion():
     while True :
         # print(data[index]["name"])
         if data[index]["category"] == "Fashion" :
-            print(data[index]["name"], end=", ")
+            print(data[index]["name"] + " " + "(" + data[index]["price"] + ")")
         index = index + 1
         if int(len(data)) == index:
             break
