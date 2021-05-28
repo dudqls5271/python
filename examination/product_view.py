@@ -1,10 +1,16 @@
 from product import *
-class product_view:
-    def __init__(self):
-        print("==========================")
-        Digital()
-        life()
-        Fashion()
-        print("==========================")
+import product
+import product_selection
+
+def te():
+    print("==========================")
+    product.Digital()
+    product.life()
+    product.Fashion()
+    print("==========================")
+
+    product_selection.product_select()
+
 if __name__ == '__main__':
-    product_view()
+    te()
+

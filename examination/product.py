@@ -33,3 +33,7 @@ def Fashion():
         if int(len(data)) == index:
             break
 
+if __name__ == '__main__':
+    Digital()
+    life()
+    Fashion()
