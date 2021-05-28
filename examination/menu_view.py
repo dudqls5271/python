@@ -7,7 +7,8 @@ def menm():
         import product_view
         product_view.te()
     elif ch == "2":
-        print("내 포인트 조회")
+        import mypoint
+        mypoint.mypoints()
     elif ch == "3":
         print("내 영주증 리스트 조회")
     elif ch == "4":

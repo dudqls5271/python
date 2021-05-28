@@ -4,7 +4,7 @@ with open("user.json", "r", encoding="utf-8") as handle:
     jdata = handle.read()
 data = json.loads(jdata)
 
-user_name = "이영빈"
+user_name = None
 def user():
     global user_name
     index = 0

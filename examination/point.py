@@ -1,33 +1,43 @@
+import json
 from Payment import *
 from user_info import *
+from Payment import *
 
 with open("user.json", "r", encoding="utf-8") as handle:
     jdata = handle.read()
 data = json.loads(jdata)
 
+point = None
+
 def porint():
-    print("회원 포인트 적립(3%) 대상 입니다.")
-    price_re = price
-    characters = ",원"
+    global point
+    print(user_name)
+    with open('user.json', 'r', encoding='UTF-8') as f:
+        json_data_defore = json.load(f)
 
-    for x in range(len(characters)):
-        price_re = price_re.replace(characters[x], "")
+        point = int(price_sum) * 0.03
+        print(str(round(point)) + "원 정립 되었습니다.")
 
-    point = int(price_re) * 0.03
-    print(str(round(point)) + "원 정립 되었습니다.")
+        index = 0
+        while True:
+            if data[index]["user_name"] == str(user_name):
+                porint_re = int(data[index]["user_point"]) + int(round(point))
 
-    index = 0
-    while True :
-        if data[index]["user_name"] == user_name :
-            print(data[index]["user_point"])
-            print(round(point))
-            porint_re = int(data[index]["user_point"]) + int(round(point))
+                json_data_defore[index]["user_point"] = porint_re
 
-            print(data[index]["user_point"])
-        index = index + 1
-        if int(len(data)) == index:
-            break
+                with open('user.json', 'w', encoding='UTF-8') as mk_f:
+                    mk_f.write((json.dumps(json_data_defore, indent='\t')))
+                mk_f.close()
 
+                import Receipt
+                Receipt.receipt()
+
+                import menu_view
+                menu_view.menm()
+                break
+            index = index + 1
+            if int(len(data)) == index:
+                break
 
 if __name__ == '__main__':
     porint()
