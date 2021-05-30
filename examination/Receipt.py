@@ -18,7 +18,7 @@ user = json.loads(jdata2)
 
 def receipt():
     print("===================================")
-    print("              영수증 상세")
+    print("          영수증 상세")
     print("===================================")
     print("수량                            " + productNum + "개")
     index = 0
@@ -32,18 +32,21 @@ def receipt():
 
     print("===================================")
     now = datetime.datetime.now()
-    nowTime = now.strftime('%H:%M:%S')
-    print("승인 일시                   " + nowTime)
+    nowTime = now.strftime('%Y-%m-%d_%H:%M:%S')
+    print("승인 일시        " + nowTime)
     print("거래 유형                   " + "승인")
     print("추가 마일리지                " + str(round(point)))
     index = 0
     while True:
-        if user[index]["user_name"] == user_name:
-            print("보유 마일리지                " + str(user[index]["user_point"]))
+        if user[str(index)]["user_name"] == user_name:
+            print("보유 마일리지                " + str(user[str(index)]["user_point"]))
         index = index + 1
         if int(len(user)) == index:
             break
     print("거래자 명                   " + user_name)
     print("===================================")
+
+    import Receipt_Make
+    Receipt_Make.receipt_make()
 if __name__ == '__main__':
     receipt()

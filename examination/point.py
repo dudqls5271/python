@@ -20,10 +20,10 @@ def porint():
 
         index = 0
         while True:
-            if data[index]["user_name"] == str(user_name):
-                porint_re = int(data[index]["user_point"]) + int(round(point))
+            if data[str(index)]["user_name"] == str(user_name):
+                porint_re = int(data[str(index)]["user_point"]) + int(round(point))
 
-                json_data_defore[index]["user_point"] = porint_re
+                json_data_defore[str(index)]["user_point"] = porint_re
 
                 with open('user.json', 'w', encoding='UTF-8') as mk_f:
                     mk_f.write((json.dumps(json_data_defore, indent='\t')))
