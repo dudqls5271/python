@@ -1,14 +1,8 @@
 {
 	"0": {
-		"price": "asd",
-		"year": "200000"
-	},
-	"1": {
-		"price": "1",
-		"year": "1"
-	},
-	"2": {
-		"price": "2",
-		"year": "2"
+		"user_name": "YB_BIN",
+		"user_id": "1",
+		"user_pw": "1",
+		"user_point": 37032
 	}
 }
