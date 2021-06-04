@@ -1,22 +1,17 @@
-cardpay = None
+cardpay_re = None
 def cardpay():
-    global cardpay
-    cardpay = input("카드 번호을 입력해주세요 > \n Ex) 1111-1111-1111-1111 \n")
+    global cardpay_re
+    cardpay_re = input("카드 번호을 입력해주세요 > \n Ex) 1111-1111-1111-1111 \n")
     while True:
         # characters = "-"
-        # cardnum = cardnum.replace(characters, "")
+        # cardpay_re = cardpay_re.replace(characters, "")
 
-        if int(len(cardpay)) == 19:
+        if int(len(cardpay_re)) == 19:
             import cardCVC
             cardCVC.cardCVC()
             break
-        elif int(len(cardpay)) != 16:
+        elif cardpay_re.isdigit() != True:
             print("잘못 입력하셨습니다.")
-            cardpay = input("카드 번호을 입력해주세요 > \n Ex) 1111-1111-1111-1111 \n")
-        elif cardpay.isdigit() != True:
-            print("잘못 입력하셨습니다.")
-            cardpay = input("카드 번호을 입력해주세요 > \n Ex) 1111-1111-1111-1111 \n")
-
-
-if __name__ == '__main__' :
+            cardpay_re = input("카드 번호을 입력해주세요 > \n Ex) 1111-1111-1111-1111 \n")
+if __name__ == '__main__':
     cardpay()
