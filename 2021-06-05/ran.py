@@ -31,7 +31,6 @@ def random_Word() :
         # 랜덤으로 뽑힌 단어을 리스트화 시키는 것이다.
         for i in random_word:
             word_list.append(i)
-        print(word_list)
 
         # 우선 랜덤으로 뽑힌 단어의 글자 수를 받아와 그 겟수 만큼 _을 word_qust에 저장
         for i in range(word_len):
@@ -59,10 +58,11 @@ def ex():
                 for k in word_qust:
                     print(k, end=" ")
                 print("\n")
+                print("정답 입니다.")
                 score = score + 1
                 try_num = try_num - 1
                 print("현제 남은 횟수는 " + str(try_num) + "번 입니다.")
-            break
+                break
             if user_ch != i:
                 print("틀렸습니다.")
                 try_num = try_num - 1
