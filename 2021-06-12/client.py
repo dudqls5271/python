@@ -21,8 +21,12 @@ def handle_send(client_socket):
     client_socket.close()
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description="\nclient\n-p port\n-i host\n-s string")
+    # 포트를 받는다
     parser.add_argument('-p', help="port")
+    # 아이피를 받겠다
+    # required=True 이거 없으면 실행 못한다.
     parser.add_argument('-i', help="host", required=True)
+    # user을 받는다
     parser.add_argument('-u', help="user", required=True)
     args = parser.parse_args()
     host = args.i

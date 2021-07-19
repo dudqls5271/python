@@ -52,6 +52,9 @@ def ex():
         user_ch = input("알파벳을 입력해주세요 > ")
         # 입력 받은 input을 word_list랑 비교 한다.
         for i in word_list:
+            # 만약에 사용자가 입력한 값이 word_list에 있는 값과 같으면
+            # *로 처리하는 과정을 적은것이다.
+            # 이거는 중복되는 글자들을 무시하기 위한것이다.
             if user_ch == i:
                 word_qust[word_list.index(i)] = user_ch
                 word_list[word_list.index(i)] = "*"
@@ -68,7 +71,7 @@ def ex():
                 try_num = try_num - 1
                 print("현제 남은 횟수는 " + str(try_num) + "번 입니다.")
                 break
-
+        # 횟수가 0이 되면 게임이 끝나고 다음 문제가 나온다.
         if try_num == 0 :
             print("아웃 입니다.")
             print("다음 문제 나옵니다.")
