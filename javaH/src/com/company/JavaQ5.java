@@ -3,7 +3,7 @@ package com.company;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class JavaQ05 {
+public class JavaQ5 {
     public static void choiceNum() {
         while (true) {
             System.out.print("입력하실 문자 개수를 입력 해주세요 : ");

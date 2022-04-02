@@ -2,26 +2,27 @@ package com.company;
 
 import java.util.Scanner;
 
-
-
 public class javaQ1 {
-    public static void printGugudan(int index){
-        for(int i = 0; i < index+1; i++) {
-            for(int j = 1; j < 10; j++) {
-                System.out.println(i+"*"+j + "=" + i*j);
-            }
 
-            System.out.println("=======================================");
-        }
+    public static void inputNum() {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("첫 번쨰 값을 입력해주세요 : ");
+        int num1 = scanner.nextInt();
+        System.out.print("두 번째 값을 입력해주세요 : ");
+        int num2 = scanner.nextInt();
+
+        valueOut(num1, num2);
+    }
+
+    public static void valueOut(int num1, int num2) {
+        System.out.println(num1 + "+" + num2 + "=" + (num1+num2));
+        System.out.println(num1 + "-" + num2 + "=" + (num1-num2));
+        System.out.println(num1 + "*" + num2 + "=" + num1*num2);
+        System.out.println(num1 + "/" + num2 + "=" + num1/num2);
     }
 
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        int a = 1;
-        while (a != 0) {
-            a = scanner.nextInt();
-            printGugudan(a);
-        }
-        scanner.close();
+        inputNum();
     }
 }
