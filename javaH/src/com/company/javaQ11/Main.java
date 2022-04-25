@@ -9,13 +9,5 @@ public class Main {
         a.type();
         a.fuel();
         a.car();
-
-        Morning b = new Morning();
-        b.color();
-        b.price();
-        b.modelName();
-        b.type();
-        b.fuel();
-        b.car();
     }
 }
