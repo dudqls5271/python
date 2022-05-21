@@ -5,8 +5,8 @@ import java.io.*;
 public class ManageTextFile {
     public static void main(String[] args) {
         ManageTextFile manager = new ManageTextFile();
-        int numberCount = 10;
-        String filepath = "/Users/iyeongbin/Documents/GitHub/python/javaH/src/com/javaGod02/FimeSample/writer/number.txt";
+        int numberCount = 1;
+        String filepath = "/Users/iyeongbin/Documents/GitHub/python/javaH/src/com/javaGod02/FimeSample/writer/number2.txt";
         manager.writeFile(filepath, numberCount);
     }
 
